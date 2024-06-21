@@ -10,27 +10,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import devDotToIcon from "../images/socials/devdotto.svg";
 import envelopeIcon from "../images/socials/envelope.svg";
 import gitHubIcon from "../images/socials/github.svg";
-import instagramIcon from "../images/socials/instagram.svg";
+import phoneIcon from "../images/socials/phone.svg";
 import linkedInIcon from "../images/socials/linkedin.svg";
-import mediumIcon from "../images/socials/medium.svg";
-import twitterIcon from "../images/socials/twitter.svg";
-import youTubeIcon from "../images/socials/youtube.svg";
+// import instagramIcon from "../images/socials/instagram.svg";
+// import mediumIcon from "../images/socials/medium.svg";
+// import twitterIcon from "../images/socials/twitter.svg";
+// import youTubeIcon from "../images/socials/youtube.svg";
+// import devDotToIcon from "../images/socials/devdotto.svg";
 
 const Footer = (props) => {
   const {
-    devDotTo,
+    // devDotTo,
     email,
     gitHub,
-    instagram,
+    phone,
+    // instagram,
     linkedIn,
-    medium,
+    // medium,
     name,
     primaryColor,
-    twitter,
-    youTube,
+    // twitter,
+    // youTube,
   } = props;
 
   return (
@@ -58,9 +60,13 @@ const Footer = (props) => {
             <img src={envelopeIcon} alt="email" className="socialIcon" />
           </a>
         )}
-        {devDotTo && (
-          <a href={`https://dev.to/${devDotTo}`} target="_blank" rel="noopener noreferrer">
-            <img src={devDotToIcon} alt="Dev.to" className="socialIcon" />
+        {linkedIn && (
+          <a
+            href={`https://www.linkedin.com/in/${linkedIn}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedInIcon} alt="LinkedIn" className="socialIcon" />
           </a>
         )}
         {gitHub && (
@@ -68,6 +74,12 @@ const Footer = (props) => {
             <img src={gitHubIcon} alt="GitHub" className="socialIcon" />
           </a>
         )}
+        {phone && (
+          <a href={`tel:${phone}`}>
+            <img src={phoneIcon} alt="phone" className="socialIcon" />
+          </a>
+        )}
+        {/* Uncomment and use these sections if needed
         {instagram && (
           <a
             href={`https://www.instagram.com/${instagram}`}
@@ -77,13 +89,9 @@ const Footer = (props) => {
             <img src={instagramIcon} alt="Instagram" className="socialIcon" />
           </a>
         )}
-        {linkedIn && (
-          <a
-            href={`https://www.linkedin.com/in/${linkedIn}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={linkedInIcon} alt="LinkedIn" className="socialIcon" />
+        {devDotTo && (
+          <a href={`https://dev.to/${devDotTo}`} target="_blank" rel="noopener noreferrer">
+            <img src={devDotToIcon} alt="Dev.to" className="socialIcon" />
           </a>
         )}
         {medium && (
@@ -105,6 +113,7 @@ const Footer = (props) => {
             <img src={youTubeIcon} alt="YouTube" className="socialIcon" />
           </a>
         )}
+        */}
       </div>
       <p className="small" style={{ marginTop: 0, color: "white" }}>
         Created by {name}
@@ -115,19 +124,21 @@ const Footer = (props) => {
 
 Footer.defaultProps = {
   name: "",
+  primaryColor: "#000", // Default to black if no color is provided
 };
 
 Footer.propTypes = {
   devDotTo: PropTypes.string,
   email: PropTypes.string,
   gitHub: PropTypes.string,
-  instagram: PropTypes.string,
+  phone: PropTypes.string,
+  // instagram: PropTypes.string,
   linkedIn: PropTypes.string,
   medium: PropTypes.string,
   name: PropTypes.string.isRequired,
   primaryColor: PropTypes.string,
-  twitter: PropTypes.string,
-  youTube: PropTypes.string,
+  // twitter: PropTypes.string,
+  // youTube: PropTypes.string,
 };
 
 export default Footer;
