@@ -22,6 +22,7 @@ const siteProps = {
   email: "kuriaaustin125@gmail.com",
   gitHub: "Austinkuria",
   linkedIn: "Austin Maina",
+  phone: "0797561978",
   // instagram: "",
   // medium: "",
   // twitter: "",
