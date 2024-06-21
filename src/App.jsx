@@ -18,7 +18,7 @@ import "./styles.css";
 
 const siteProps = {
   name: "Austin Maina",
-  title: "Web Designer & Developer",
+  title: "Frontend Web Developer",
   email: "kuriaaustin125@gmail.com",
   gitHub: "Austinkuria",
   linkedIn: "Austin Maina",
