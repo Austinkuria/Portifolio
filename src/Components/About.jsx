@@ -20,7 +20,7 @@ const description =
  * List of some skills or technologies you work on, are learning,
  * passionate about, or enjoy.
  */
-const skillsList = ["Frontend Development", "React", "JavaScript", "HTML & CSS", "Bootstrap 5"];
+const skillsList = ["Frontend Development", "React", "JavaScript", "HTML & CSS", "Bootstrap5"];
 
 // A detailed description or a quote that describes you.
 const detailOrQuote =
@@ -51,12 +51,12 @@ const About = () => {
             columns: 2,
             fontSize: "1.25rem",
             margin: "2rem 3rem",
-            gap: "3rem",
+            gap: "1rem",
             listStyleType: "none",
           }}
         >
           {skillsList.map((skill) => (
-            <li key={skill} style={{ marginBottom: "0.5rem" }}>
+            <li key={skill} style={{ marginBottom: "0.1rem" }}>
               {skill}
             </li>
           ))}
